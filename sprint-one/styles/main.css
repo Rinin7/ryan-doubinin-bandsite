@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "AvenirNextProLT";
+  src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AvenirNextProLT";
+  src: url("../assets/fonts/AvenirNextProLT/alternative-files/Linotype - Avenir Next LT Pro Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AvenirNextProLT";
+  src: url("../assets/fonts/AvenirNextProLT/alternative-files/Linotype - Avenir Next LT Pro Demi.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  color: #323232;
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+h2 {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+h4,
+p,
+li {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+h5 {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  background-color: #323232;
+  width: 100%;
+}
+
+.header__logo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 150px;
+}
+
+.header__nav-links {
+  font-weight: bold;
+}
+/*# sourceMappingURL=main.css.map */
