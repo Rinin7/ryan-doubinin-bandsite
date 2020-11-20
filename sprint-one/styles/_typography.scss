@@ -1,20 +1,66 @@
 @font-face {
-  font-family: "AvenirNextProLT";
+  font-family: "Avenir";
   src: url("../assets/fonts/AvenirNextProLT/Linotype\ -\ AvenirNextLTPro-Regular.otf") format("opentype");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "AvenirNextProLT";
+  font-family: "Avenir";
   src: url("../assets/fonts/AvenirNextProLT/alternative-files/Linotype\ -\ Avenir\ Next\ LT\ Pro\ Bold.ttf") format("truetype");
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "AvenirNextProLT";
+  font-family: "Avenir";
   src: url("../assets/fonts/AvenirNextProLT/alternative-files/Linotype\ -\ Avenir\ Next\ LT\ Pro\ Demi.ttf") format("truetype");
-  font-weight: bold;
+  font-weight: 500;
   font-style: normal;
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+h2 {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+h4,
+p,
+li {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+h5 {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hero-header {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+
+  @include tablet {
+    font-size: 60px;
+    line-height: 68px;
+  }
+}
+
+.sub-header {
+  font-size: 14px;
+  line-height: 22px;
+
+  @include tablet {
+    font-size: 16px;
+  }
 }

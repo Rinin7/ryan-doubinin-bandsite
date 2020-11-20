@@ -1,0 +1,50 @@
+.hero {
+  background-image: url(../assets/images/hero-background.jpg);
+  width: 100%;
+  margin: 0;
+  height: 175px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: stretch;
+  position: relative;
+
+  @include tablet {
+    height: 400px;
+  }
+
+  @include desktop {
+    height: 670px;
+  }
+
+  &__content {
+    display: flex;
+    flex-basis: 100%;
+    background-color: rgba(#323232, 0.5);
+    align-items: center;
+    padding: 0 16px;
+
+    @include tablet {
+      padding: 0 24px;
+    }
+
+    @include desktop {
+      padding: 0 180px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    color: white;
+    max-width: 305px;
+
+    @include tablet {
+      max-width: 720px;
+    }
+  }
+
+  &__name {
+    display: inline-block;
+  }
+}
