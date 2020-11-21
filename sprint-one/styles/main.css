@@ -69,6 +69,19 @@ a {
   }
 }
 
+.main-header {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  .main-header {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+
 .header {
   background-color: #323232;
   width: 100%;
@@ -175,7 +188,7 @@ a {
 }
 
 .hero {
-  background-image: url(../assets/images/hero-background.jpg);
+  background-image: url(../assets/images/bandsiteimgdj2.jpg);
   width: 100%;
   margin: 0;
   height: 175px;
@@ -244,71 +257,297 @@ a {
   display: inline-block;
 }
 
+.feature {
+  padding: 0 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .feature {
+    padding: 0 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .feature {
+    padding: 0 180px;
+  }
+}
+
+.feature__title {
+  margin: 32px 0 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .feature__title {
+    margin: 48px 0 36px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .feature__title {
+    margin: 48px 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .feature__content-container {
+    padding: 0 10%;
+  }
+}
+
+.feature__image {
+  width: 100%;
+  display: block;
+  margin-bottom: 24px;
+}
+
+.feature__quote {
+  margin-bottom: 32px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .feature__quote {
+    font-weight: 700;
+    font-size: 24px;
+    margin: 48px 0 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .feature__quote {
+    margin: 48px 0 40px;
+  }
+}
+
+.feature__quote-citation {
+  margin: 0 0 40px 0;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .feature__quote-citation {
+    font-size: 16px;
+    margin: 0 0 56px 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .feature__quote-citation {
+    margin: 0 0 56px 0;
+  }
+}
+
+.feature__subtitle {
+  margin: 0 0 24px 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .feature__subtitle {
+    margin: 0 0 24px 0;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .feature__subtitle {
+    margin: 0 0 32px 0;
+    font-weight: 700;
+  }
+}
+
+.feature__body {
+  margin: 0 0 40px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .feature__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.feature__body-section {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .feature__body-section {
+    margin-bottom: 0;
+  }
+  .feature__body-section:first-of-type {
+    margin-right: 12px;
+  }
+  .feature__body-section:last-of-type {
+    margin-left: 12px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .feature__body-section:first-of-type {
+    margin-right: 20px;
+  }
+  .feature__body-section:last-of-type {
+    margin-left: 20px;
+  }
+}
+
+.gallery {
+  background-color: #fafafa;
+  padding: 32px 16px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .gallery {
+    padding: 48px 24px 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .gallery {
+    padding: 48px 180px 0;
+  }
+}
+
+.gallery__title {
+  margin: 0 0 24px 0;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .gallery__title {
+    font-size: 36px;
+    line-height: 44px;
+    margin: 0 0 56px 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .gallery__title {
+    margin: 0 0 64px 0;
+  }
+}
+
+.gallery__photo-container {
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .gallery__photo-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 -12px 16px;
+  }
+}
+
+.gallery__photo {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .gallery__photo {
+    margin-bottom: 24px;
+    padding: 0 12px;
+    width: 33.3333%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
 body {
   color: #323232;
   margin: 0;
   font-family: "Avenir";
 }
 
-.musician {
-  width: 100%;
-}
-
-.musician__title {
-  padding-left: 16px;
-}
-
-.musician__feature-container {
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-.musician__feature {
-  max-height: 145px;
-  max-width: 288px;
-  width: 100%;
-}
-
-.musician__article {
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-.gallery {
-  background-color: #fafafa;
-}
-
-.gallery__title {
-  padding-left: 16px;
-  padding-top: 20px;
-}
-
-.gallery__photo-container {
-  padding-left: 16px;
-  padding-right: 16px;
-  width: 100%;
-  padding-bottom: 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.gallery__photo {
-  max-height: 162px;
-  max-width: 288px;
-  width: 100%;
-  padding-bottom: 20px;
-}
-
 .footer {
   background-color: #323232;
   color: white;
-  padding-top: 20px;
-  padding-left: 16px;
+  padding: 32px 16px 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 32px 24px 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__links-left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.footer__title {
+  margin: 0 0 24px 0;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__title {
+    font-size: 36px;
+    line-height: 44px;
+    margin-right: 32px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__media {
+    padding-left: 24px;
+  }
 }
 
 .footer__media-logo {
   padding: 0 10px 0 0;
-  margin-bottom: 20px;
+  margin: 0 16px 24px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__media-logo {
+    margin: 12px 16px 0 0;
+  }
+}
+
+.footer__logo {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .footer__content-bold {

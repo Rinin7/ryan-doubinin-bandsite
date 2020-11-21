@@ -1,0 +1,118 @@
+.feature {
+  padding: 0 16px;
+
+  @include tablet {
+    padding: 0 24px;
+  }
+
+  @include desktop {
+    padding: 0 180px;
+  }
+
+  &__title {
+    margin: 32px 0 24px;
+
+    @include tablet {
+      margin: 48px 0 36px;
+    }
+
+    @include desktop {
+      margin: 48px 0;
+    }
+  }
+
+  &__content-container {
+    @include desktop {
+      padding: 0 10%;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    display: block;
+    margin-bottom: 24px;
+  }
+
+  &__quote {
+    margin-bottom: 32px;
+    font-weight: 500;
+    font-size: 16px;
+
+    @include tablet {
+      font-weight: 700;
+      font-size: 24px;
+      margin: 48px 0 40px;
+    }
+
+    @include desktop {
+      margin: 48px 0 40px;
+    }
+  }
+
+  &__quote-citation {
+    margin: 0 0 40px 0;
+    font-weight: 500;
+
+    @include tablet {
+      font-size: 16px;
+      margin: 0 0 56px 0;
+    }
+
+    @include desktop {
+      margin: 0 0 56px 0;
+    }
+  }
+
+  &__subtitle {
+    margin: 0 0 24px 0;
+    font-size: 16px;
+    font-weight: 500;
+
+    @include tablet {
+      margin: 0 0 24px 0;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    @include desktop {
+      margin: 0 0 32px 0;
+      font-weight: 700;
+    }
+  }
+
+  &__body {
+    margin: 0 0 40px 0;
+
+    @include tablet {
+      display: flex;
+    }
+
+    &-section {
+      margin-top: 0;
+      margin-bottom: 24px;
+
+      @include tablet {
+        margin-bottom: 0;
+
+        &:first-of-type {
+          margin-right: 12px;
+        }
+
+        &:last-of-type {
+          margin-left: 12px;
+        }
+      }
+
+      @include desktop {
+        &:first-of-type {
+          margin-right: 20px;
+        }
+
+        &:last-of-type {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}

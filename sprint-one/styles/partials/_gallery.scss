@@ -1,0 +1,50 @@
+.gallery {
+  background-color: #fafafa;
+  padding: 32px 16px 0;
+
+  @include tablet {
+    padding: 48px 24px 0;
+  }
+
+  @include desktop {
+    padding: 48px 180px 0;
+  }
+
+  &__title {
+    margin: 0 0 24px 0;
+    font-size: 24px;
+    line-height: 32px;
+
+    @include tablet {
+      font-size: 36px;
+      line-height: 44px;
+      margin: 0 0 56px 0;
+    }
+
+    @include desktop {
+      margin: 0 0 64px 0;
+    }
+  }
+
+  &__photo-container {
+    margin-bottom: 40px;
+
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -12px 16px;
+    }
+  }
+
+  &__photo {
+    width: 100%;
+    margin-bottom: 16px;
+
+    @include tablet {
+      margin-bottom: 24px;
+      padding: 0 12px;
+      width: 33.3333%;
+      box-sizing: border-box;
+    }
+  }
+}
