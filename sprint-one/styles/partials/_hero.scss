@@ -36,7 +36,7 @@
 
   &__title {
     margin: 0;
-    color: white;
+    color: $secondaryfont;
     max-width: 305px;
 
     @include tablet {

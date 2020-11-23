@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bandsite - Bio</title>
     <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <header class="header">
@@ -12,22 +14,22 @@
         <a href="#"><img class="header__logo" src="./assets/logos/Logo-bandsite.svg" alt="logo" /></a>
       </div>
       <nav class="header__nav">
-        <a href="#" class="header__nav-links sub-header header__nav-links--active">Biography</a>
-        <a href="#" class="header__nav-links sub-header">Shows</a>
+        <a href="./index.html" class="header__nav-links header__nav-links--active">Biography</a>
+        <a href="./pages/shows.html" class="header__nav-links">Shows</a>
       </nav>
     </header>
     <main>
       <section class="hero">
         <div class="hero__content">
-          <h1 class="hero__title hero-header"><span class="hero__name">Gaspard Auge</span> & <span class="hero__name">Xavier de Rosnay</span></h1>
+          <h1 class="hero__title"><span class="hero__name">Gaspard Auge</span> & <span class="hero__name">Xavier de Rosnay</span></h1>
         </div>
       </section>
       <section class="feature">
         <h2 class="feature__title main-header">About The Musicians</h2>
         <div class="feature__content-container">
-          <img class="feature__image" src="./assets/images/musician-feature7.jpg" alt="musicians" />
+          <img class="feature__image" src="./assets/images/musician-feature9.jpg" alt="musicians" />
           <h3 class="feature__quote">"We are more comfortable with not fighting what comes naturally. Before we might have thought, 'We need to be smarter than this'"</h3>
-          <p class="feature__quote-citation">- Xavier de Rosnay</p>
+          <h4 class="feature__quote-citation">- Xavier de Rosnay</p>
           <h3 class="feature__subtitle">Xavier de Rosnay & Gaspard Augé</h3>
           <div class="feature__body">
             <p class="feature__body-section">
@@ -47,15 +49,15 @@
         <h2 class="gallery__title">Photo Gallery</h2>
         <div class="gallery-container">
           <div class="gallery__photo-container">
-            <img class="gallery__photo" src="./assets/images/Photo-gallery-1.jpg" alt="gallery1" />
-            <img class="gallery__photo" src="./assets/images/Photo-gallery-2.jpg" alt="gallery2" />
-            <img class="gallery__photo" src="./assets/images/Photo-gallery-3.jpg" alt="gallery3" />
-            <img class="gallery__photo" src="./assets/images/Photo-gallery-4.jpg" alt="gallery4" />
-            <img class="gallery__photo" src="./assets/images/Photo-gallery-5.jpg" alt="gallery5" />
-            <img class="gallery__photo" src="./assets/images/Photo-gallery-6.jpg" alt="gallery6" />
-            <img class="gallery__photo" src="./assets/images/Photo-gallery-7.jpg" alt="gallery7" />
-            <img class="gallery__photo" src="./assets/images/Photo-gallery-8.jpg" alt="gallery8" />
-            <img class="gallery__photo" src="./assets/images/Photo-gallery-9.jpg" alt="gallery9" />
+            <img class="gallery__photo" src="./assets/images/Photo-gallery-1.jpg" alt="concert stage with lights coming through smoke" />
+            <img class="gallery__photo" src="./assets/images/Photo-gallery-2.jpg" alt="girl dancing at concert with hands held in the air" />
+            <img class="gallery__photo" src="./assets/images/Photo-gallery-3.jpg" alt="hands in a concert crowd reaching towards the stage" />
+            <img class="gallery__photo" src="./assets/images/Photo-gallery-4.jpg" alt="girl on top of someone's shoulders watching a concert" />
+            <img class="gallery__photo" src="./assets/images/Photo-gallery-5.jpg" alt="confetti thrown into a concert crowd" />
+            <img class="gallery__photo" src="./assets/images/Photo-gallery-6.jpg" alt="singer on stage at a concert with hand in the air" />
+            <img class="gallery__photo" src="./assets/images/Photo-gallery-7.jpg" alt="concert stage lit up with a rainbow of colors" />
+            <img class="gallery__photo" src="./assets/images/Photo-gallery-8.jpg" alt="dj spinning turn tables" />
+            <img class="gallery__photo" src="./assets/images/Photo-gallery-9.jpg" alt="confetti raining down on a concert crowd" />
           </div>
         </div>
       </section>
@@ -64,35 +66,37 @@
           <div class="footer__links-left">
             <h3 class="footer__title">Get In Touch</h3>
             <div class="footer__media">
-              <img class="footer__media-logo" src="./assets/icons/svg/Icon-instagram.svg" alt="instagram" />
-              <img class="footer__media-logo" src="./assets/icons/svg/Icon-facebook.svg" alt="facebook" />
-              <img class="footer__media-logo" src="./assets/icons/svg/Icon-twitter.svg" alt="twitter" />
+              <a href="https://www.instagram.com/"><img class="footer__media-logo" src="./assets/icons/svg/Icon-instagram.svg" alt="instagram" /></a>
+              <a href="https://www.facebook.com/"><img class="footer__media-logo" src="./assets/icons/svg/Icon-facebook.svg" alt="facebook" /></a>
+              <a href="https://www.twitter.com/"><img class="footer__media-logo" src="./assets/icons/svg/Icon-twitter.svg" alt="twitter" /></a>
             </div>
           </div>
           <a href="#"><img class="footer__logo" src="./assets/logos/Logo-bandsite.svg" alt="logo" /></a>
         </div>
-        <div class="footer__contact">
-          <p class="footer__contact-name">Richard Rovner</p>
-          <p class="footer__contact-company">The Bees Knees Management</p>
-          <p class="footer__contact-address">460 King Street West</p>
-          <p class="footer__contact-location">Toronto, Ontario M5V 1L7</p>
-          <p class="footer__contact-email">info@thebeesknees.com</p>
+        <div class="footer__contact-container">
+          <div class="footer__contact">
+            <h4 class="footer__contact-name">Richard Rovner</h4>
+            <h4 class="footer__contact-company">The Bees Knees Management</h4>
+            <h5 class="footer__contact-address">460 King Street West</h5>
+            <h5 class="footer__contact-location">Toronto, Ontario M5V 1L7</h5>
+            <h5 class="footer__contact-email">info@thebeesknees.com</h5>
+          </div>
+          <div class="footer__contact">
+            <h4 class="footer__contact-name">Marsha Vlasic</h4>
+            <h4 class="footer__contact-company">Artist Group International</h4>
+            <h5 class="footer__contact-address">Booking Agent for</h5>
+            <h5 class="footer__contact-location">US / South America / Japan</h5>
+            <h5 class="footer__contact-email">marsha.vlasic@artistgrp.com</h5>
+          </div>
+          <div class="footer__contact">
+            <h4 class="footer__contact-name">Russel Warby</h4>
+            <h4 class="footer__contact-company">William Morrir Entertainment</h4>
+            <h5 class="footer__contact-address">Booking Agent for</h5>
+            <h5 class="footer__contact-location">UK / EU / AU</h5>
+            <h5 class="footer__contact-email">RLW@wmeentertainment.com</h5>
+          </div>
         </div>
-        <div class="footer__contact">
-          <p class="footer__contact-name">Marsha Vlasic</p>
-          <p class="footer__contact-company">Artist Group International</p>
-          <p class="footer__contact-address">Booking Agent for</p>
-          <p class="footer__contact-location">US / South America / Japan</p>
-          <p class="footer__contact-email">marsha.vlasic@artistgrp.com</p>
-        </div>
-        <div class="footer__contact">
-          <p class="footer__contact-name">Russel Warby</p>
-          <p class="footer__contact-company">William Morrir Entertainment</p>
-          <p class="footer__contact-address">Booking Agent for</p>
-          <p class="footer__contact-location">UK / EU / AU</p>
-          <p class="footer__contact-email">RLW@wmeentertainment.com</p>
-        </div>
-        <div class="footer__copyright">Copyright The Bees Knees © 2018 <span class="footer__copyright-bottom">All Rights Reserved</span></div>
+        <h5 class="footer__copyright">Copyright The Bees Knees © 2018 <span class="footer__copyright-bottom">All Rights Reserved</span></h5>
       </footer>
     </main>
   </body>

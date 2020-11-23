@@ -10,7 +10,7 @@
   }
 
   &__title {
-    margin: 32px 0 24px;
+    margin: 32px 0 16px;
 
     @include tablet {
       margin: 48px 0 36px;
@@ -36,12 +36,10 @@
   &__quote {
     margin-bottom: 32px;
     font-weight: 500;
-    font-size: 16px;
 
     @include tablet {
       font-weight: 700;
-      font-size: 24px;
-      margin: 48px 0 40px;
+      margin: 48px 0 32px;
     }
 
     @include desktop {
@@ -53,11 +51,6 @@
     margin: 0 0 40px 0;
     font-weight: 500;
 
-    @include tablet {
-      font-size: 16px;
-      margin: 0 0 56px 0;
-    }
-
     @include desktop {
       margin: 0 0 56px 0;
     }
@@ -65,19 +58,15 @@
 
   &__subtitle {
     margin: 0 0 24px 0;
-    font-size: 16px;
     font-weight: 500;
 
     @include tablet {
       margin: 0 0 24px 0;
       font-weight: 700;
-      font-size: 24px;
-      line-height: 32px;
     }
 
     @include desktop {
       margin: 0 0 32px 0;
-      font-weight: 700;
     }
   }
 
