@@ -1,0 +1,248 @@
+@import "variables";
+@import "mixins";
+@import "typography";
+@import "./partials/header";
+@import "./partials/footer";
+
+// general styling
+
+body {
+  color: $globalfont;
+  margin: 0;
+  font-family: "Avenir", "Roboto", sans-serif;
+}
+
+ul,
+li {
+  list-style-type: none;
+  padding: 0;
+}
+
+// hero styling
+
+.hero {
+  display: flex;
+  height: 472px;
+  background-image: url("../assets/images/musician-feature10.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 0 16px;
+
+  @include tablet {
+    height: 670px;
+    padding: 0 24px;
+  }
+
+  @include desktop {
+    padding: 0 180px;
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: column wrap;
+    color: $secondaryfont;
+  }
+
+  &__subtitle {
+    margin: 64px 0 19.2px;
+    font-weight: 400;
+
+    @include tablet {
+      margin: 96px 0 28.8px;
+    }
+
+    @include desktop {
+      margin: 160px 0 48px;
+    }
+  }
+
+  &__desktop-container {
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+    }
+  }
+
+  &__title {
+    margin: 0 0 64px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+
+    @include tablet {
+      font-size: 3.75rem;
+      line-height: 4.25rem;
+    }
+
+    @include desktop {
+      margin: 0;
+      padding-right: 22px;
+    }
+
+    &-break {
+      @include tablet {
+        display: block;
+      }
+    }
+  }
+
+  &__iframe {
+    width: 100%;
+    max-width: 436px;
+    height: 110px;
+
+    @include tablet {
+      width: 436px;
+      height: 146px;
+    }
+
+    @include desktop {
+      padding-bottom: 13px;
+      padding-left: 64px;
+    }
+  }
+}
+
+// shows styling
+
+.shows {
+  margin: 32px 0 40px;
+  padding: 0 16px;
+
+  @include tablet {
+    padding: 0 24px;
+  }
+
+  @include desktop {
+    padding: 0 180px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    @include tablet {
+      display: inline-block;
+    }
+
+    @include desktop {
+      display: flex;
+    }
+
+    &-container {
+      display: flex;
+    }
+  }
+
+  &__table-container {
+    @include desktop {
+      width: 74.4444%;
+    }
+  }
+
+  &__container {
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 16px;
+    margin-bottom: 0;
+
+    &-top {
+      display: none;
+      border: none;
+
+      @include tablet {
+        padding: 0;
+      }
+    }
+
+    @include tablet {
+      display: flex;
+
+      &:first-of-type .shows__heading {
+        display: block;
+      }
+    }
+  }
+
+  &__date-container {
+    @include tablet {
+      flex-basis: 25%;
+      align-items: center;
+      display: flex;
+    }
+  }
+
+  &__heading {
+    padding-bottom: 16px;
+    color: $nuetral-font;
+    font-weight: 500;
+
+    @include tablet {
+      display: none;
+      padding-bottom: 24px;
+      font-size: 0.75rem;
+      line-height: 1.25rem;
+    }
+  }
+
+  &__content {
+    padding-bottom: 24px;
+
+    @include tablet {
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    &-date {
+      font-weight: 500;
+
+      @include tablet {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__venue-container {
+    @include tablet {
+      flex-basis: 25%;
+      align-items: center;
+      display: flex;
+    }
+  }
+
+  &__location-container {
+    @include tablet {
+      flex-basis: 25%;
+      align-items: center;
+      display: flex;
+    }
+  }
+
+  &__button-container {
+    display: flex;
+    align-items: flex-end;
+    flex-basis: 25%;
+  }
+
+  &__button-content {
+    width: 100%;
+  }
+
+  &__button {
+    margin: 0 0 16px;
+    padding: 14px;
+    width: 100%;
+    background-color: $primarycolor;
+    color: $secondaryfont;
+    font-family: "Avenir";
+    font-weight: 500;
+    border-radius: 4px;
+    font-size: 17px;
+    box-sizing: border-box;
+    border: none;
+
+    @include tablet {
+      margin: 0;
+    }
+  }
+}

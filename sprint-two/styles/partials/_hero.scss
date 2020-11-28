@@ -1,0 +1,42 @@
+.hero {
+  background-image: url(../assets/images/bandsiteimgdj2.jpg);
+  width: 100%;
+  margin: 0;
+  height: calc(9 / 16 * 100vw);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: stretch;
+  position: relative;
+
+  &__content {
+    display: flex;
+    flex-basis: 100%;
+    background-color: rgba(#323232, 0.5);
+    align-items: center;
+    padding: 0 16px;
+
+    @include tablet {
+      padding: 0 24px;
+    }
+
+    @include desktop {
+      padding: 0 180px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    color: $secondaryfont;
+    max-width: 305px;
+
+    @include tablet {
+      max-width: 720px;
+    }
+  }
+
+  &__name {
+    display: inline-block;
+  }
+}

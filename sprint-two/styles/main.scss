@@ -1,0 +1,183 @@
+@import "variables";
+@import "mixins";
+@import "typography";
+@import "./partials/header";
+@import "./partials/hero";
+@import "./partials/feature";
+@import "./partials/gallery";
+@import "./partials/footer";
+
+// CSS styling has been organized to their respective partials
+
+body {
+  color: $globalfont;
+  margin: 0;
+  font-family: "Avenir", "Roboto", sans-serif;
+}
+
+// comments styling
+
+.comment {
+  padding: 0 16px;
+
+  @include tablet {
+    padding: 0 24px;
+  }
+
+  @include desktop {
+    padding: 0 180px;
+  }
+
+  &__title {
+    margin: 32px 0 40px;
+  }
+
+  &__container {
+    display: flex;
+    margin: 0 auto;
+
+    @include tablet {
+      max-width: 560px;
+    }
+  }
+
+  &__profile-image {
+    width: 48px;
+    height: 48px;
+    border-radius: 25px;
+    margin-top: 20px;
+
+    @include tablet {
+      margin-top: 28px;
+    }
+
+    &-container {
+      width: 56px;
+
+      @include tablet {
+        width: 68px;
+      }
+    }
+  }
+
+  &__input-container {
+    flex-basis: auto;
+    flex-grow: 1;
+  }
+
+  &__form {
+    width: 100%;
+  }
+
+  &__input-label {
+    color: #afafaf;
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    display: block;
+
+    @include tablet {
+      padding-bottom: 8px;
+    }
+  }
+
+  &__input-name-field {
+    height: 48px;
+    border-radius: 2px;
+    // box-shadow: 0 40px 32px -4px #000;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    background-color: $nuetralcolor;
+    border: 1px solid $nuetral-background;
+    font-family: "Avenir";
+    padding-left: 16px;
+    width: 100%;
+
+    &:active {
+      border: 1px solid $primarycolor;
+    }
+  }
+
+  &__input-comment-field {
+    height: 96px;
+    border-radius: 2px;
+    // box-shadow: 0 40px 32px -4px #000;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    background-color: $nuetralcolor;
+    font-family: "Avenir";
+    padding-left: 16px;
+    padding-top: 16px;
+    border: 1px solid $nuetral-background;
+    width: 100%;
+
+    &:active {
+      border: 1px solid $primarycolor;
+    }
+  }
+
+  &__button {
+    background-color: $primarycolor;
+    color: $secondaryfont;
+    font-family: "Avenir";
+    font-weight: 500;
+    border-radius: 4px;
+    font-size: 17px;
+    box-sizing: border-box;
+    border: none;
+    height: 48px;
+    margin-bottom: 32px;
+    width: 100%;
+
+    @include tablet {
+      max-width: 160px;
+    }
+
+    &-container {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+
+.comments {
+  padding: 0 16px;
+
+  &__history {
+    display: flex;
+    margin-top: 0 auto;
+    border-bottom: 1px solid $nuetral-background;
+    padding-bottom: 24px;
+    padding-top: 24px;
+
+    &:first-of-type {
+      border-top: 1px solid $nuetral-background;
+    }
+
+    &:last-of-type {
+      margin-bottom: 40px;
+    }
+
+    &-profile {
+      width: 40px;
+      height: 40px;
+      border-radius: 25px;
+      margin-right: 8px;
+    }
+
+    &-header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    &-name {
+      margin-top: 0;
+    }
+
+    &-date {
+      margin-top: 0;
+    }
+  }
+}
