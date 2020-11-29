@@ -1,12 +1,12 @@
 .feature {
-  padding: 0 16px;
+  padding: 0 5%;
 
   @include tablet {
-    padding: 0 24px;
+    padding: 0 3.125%;
   }
 
   @include desktop {
-    padding: 0 180px;
+    padding: 0 12.5%;
   }
 
   &__title {

@@ -109,13 +109,13 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-left: 24px;
+    padding: 0 3.125%;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .header {
-    padding-left: 180px;
+    padding: 0 12.5%;
   }
 }
 
@@ -131,7 +131,7 @@ a {
           align-items: center;
   height: 100%;
   background-color: #323232;
-  padding: 16px;
+  padding: 16px 5%;
 }
 
 @media screen and (min-width: 768px) {
@@ -218,18 +218,18 @@ a {
 .footer {
   background-color: #323232;
   color: white;
-  padding: 40px 16px 40px;
+  padding: 40px 5% 40px;
 }
 
 @media screen and (min-width: 768px) {
   .footer {
-    padding: 40px 24px 40px;
+    padding: 40px 3.125% 40px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .footer {
-    padding: 48px 180px 40px;
+    padding: 48px 12.5% 40px;
   }
 }
 
@@ -409,19 +409,19 @@ li {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  padding: 0 16px;
+  padding: 0 5%;
 }
 
 @media screen and (min-width: 768px) {
   .hero {
     height: 670px;
-    padding: 0 24px;
+    padding: 0 3.125%;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .hero {
-    padding: 0 180px;
+    padding: 0 12.5%;
   }
 }
 
@@ -434,6 +434,12 @@ li {
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
   color: white;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__content {
+    width: 100%;
+  }
 }
 
 .hero__subtitle {
@@ -465,6 +471,9 @@ li {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -484,7 +493,6 @@ li {
 @media screen and (min-width: 1200px) {
   .hero__title {
     margin: 0;
-    padding-right: 22px;
   }
 }
 
@@ -510,24 +518,30 @@ li {
 @media screen and (min-width: 1200px) {
   .hero__iframe {
     padding-bottom: 13px;
-    padding-left: 64px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__iframe-container {
+    width: 34.3704%;
   }
 }
 
 .shows {
   margin: 32px 0 40px;
-  padding: 0 16px;
+  padding: 0 5%;
 }
 
 @media screen and (min-width: 768px) {
   .shows {
-    padding: 0 24px;
+    padding: 0 3.125%;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .shows {
-    padding: 0 180px;
+    padding: 0 12.5%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -593,8 +607,8 @@ li {
 
 @media screen and (min-width: 768px) {
   .shows__date-container {
-    -ms-flex-preferred-size: 25%;
-        flex-basis: 25%;
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -671,7 +685,34 @@ li {
   }
 }
 
-.shows__button-container {
+.shows__button {
+  margin: 0 0 16px;
+  padding: 14px;
+  width: 288px;
+  background-color: #323232;
+  color: white;
+  font-family: "Avenir";
+  font-weight: 500;
+  border-radius: 4px;
+  font-size: 17px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+.shows__button:hover {
+  background-color: #000;
+}
+
+@media screen and (min-width: 768px) {
+  .shows__button {
+    width: 160px;
+    margin: 0;
+  }
+}
+
+.shows__button__button-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -682,28 +723,7 @@ li {
       flex-basis: 25%;
 }
 
-.shows__button-content {
+.shows__button__button-content {
   width: 100%;
-}
-
-.shows__button {
-  margin: 0 0 16px;
-  padding: 14px;
-  width: 100%;
-  background-color: #323232;
-  color: white;
-  font-family: "Avenir";
-  font-weight: 500;
-  border-radius: 4px;
-  font-size: 17px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border: none;
-}
-
-@media screen and (min-width: 768px) {
-  .shows__button {
-    margin: 0;
-  }
 }
 /*# sourceMappingURL=shows.css.map */

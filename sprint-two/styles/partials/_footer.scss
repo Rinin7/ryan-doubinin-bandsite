@@ -1,14 +1,14 @@
 .footer {
   background-color: $primarycolor;
   color: $secondaryfont;
-  padding: 40px 16px 40px;
+  padding: 40px 5% 40px;
 
   @include tablet {
-    padding: 40px 24px 40px;
+    padding: 40px 3.125% 40px;
   }
 
   @include desktop {
-    padding: 48px 180px 40px;
+    padding: 48px 12.5% 40px;
   }
 
   &__links {
