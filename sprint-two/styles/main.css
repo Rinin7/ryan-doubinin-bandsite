@@ -804,16 +804,19 @@ body {
 
 .comments {
   padding: 0 16px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
 }
 
 .comments__history {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 0 auto;
   border-bottom: 1px solid #e1e1e1;
   padding-bottom: 24px;
   padding-top: 24px;
+  max-width: 560px;
+  margin: 0 auto;
 }
 
 .comments__history:first-of-type {
@@ -828,7 +831,19 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 25px;
-  margin-right: 8px;
+}
+
+.comments__history-profile-container {
+  -ms-flex-preferred-size: 56px;
+      flex-basis: 56px;
+}
+
+.comments__history-text-container {
+  -ms-flex-preferred-size: 1%;
+      flex-basis: 1%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .comments__history-header-container {
@@ -844,11 +859,32 @@ body {
   margin-bottom: 16px;
 }
 
+@media screen and (min-width: 768px) {
+  .comments__history-header-container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
 .comments__history-name {
   margin-top: 0;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .comments__history-name {
+    padding-right: 12px;
+  }
 }
 
 .comments__history-date {
   margin-top: 0;
+  color: #afafaf;
+}
+
+.comments__history-body {
+  padding: 0;
+  margin: 0;
 }
 /*# sourceMappingURL=main.css.map */
