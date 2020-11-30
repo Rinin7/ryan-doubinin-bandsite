@@ -35,7 +35,7 @@ function renderShows() {
   const showsContainer = document.querySelector(".shows__table-container");
 
   const htmlHeaders = `
-  <ul class="shows__container shows__container-top">
+  <ul class="shows__container-top">
   <li class="shows__date-container">
     <div class="shows__heading">DATES</div>
   </li>
@@ -58,17 +58,17 @@ function renderShows() {
       `
       <ul class="shows__container">
               <li class="shows__date-container">
-                <div class="shows__heading">DATE</div>
+                <div class="shows__heading shows__heading-line">DATE</div>
                 <div class="shows__content shows__content-date">${show.date}</div>
               </li>
 
               <li class="shows__venue-container">
-                <div class="shows__heading">VENUE</div>
+                <div class="shows__heading shows__heading-line">VENUE</div>
                 <div class="shows__content">${show.venueName}</div>
               </li>
 
               <li class="shows__location-container">
-                <div class="shows__heading">LOCATION</div>
+                <div class="shows__heading shows__heading-line">LOCATION</div>
                 <div class="shows__content">${show.locationName}</div>
               </li>
 

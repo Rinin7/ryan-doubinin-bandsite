@@ -7,7 +7,7 @@
 // general styling
 
 body {
-  color: $globalfont;
+  color: $global-font;
   margin: 0;
   font-family: "Avenir", "Roboto", sans-serif;
 }
@@ -41,7 +41,7 @@ li {
   &__content {
     display: flex;
     flex-flow: column wrap;
-    color: $secondaryfont;
+    color: $secondary-font;
 
     @include desktop {
       width: 100%;
@@ -161,15 +161,12 @@ li {
 
       @include tablet {
         padding: 0;
+        display: flex;
       }
     }
 
     @include tablet {
       display: flex;
-
-      &:first-of-type .shows__heading {
-        display: block;
-      }
     }
   }
 
@@ -187,10 +184,13 @@ li {
     font-weight: 500;
 
     @include tablet {
-      display: none;
       padding-bottom: 24px;
       font-size: 0.75rem;
       line-height: 1.25rem;
+
+      &-line {
+        display: none;
+      }
     }
   }
 
@@ -229,18 +229,10 @@ li {
   }
 
   &__button {
+    @include button-design;
     margin: 0 0 16px;
     padding: 14px;
     width: 288px;
-    background-color: $primarycolor;
-    color: $secondaryfont;
-    font-family: "Avenir";
-    font-weight: 500;
-    border-radius: 4px;
-    font-size: 17px;
-    box-sizing: border-box;
-    border: none;
-    outline: none;
 
     &:hover {
       background-color: #000;

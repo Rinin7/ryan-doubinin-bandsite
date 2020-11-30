@@ -216,7 +216,7 @@ a {
 }
 
 .hero {
-  background-image: url(../assets/images/bandsiteimgdj2.jpg);
+  background-image: url("../assets/images/bandsiteimgdj2.jpg");
   width: 100%;
   margin: 0;
   height: calc(9 / 16 * 100vw);
@@ -649,12 +649,6 @@ a {
   }
 }
 
-body {
-  color: #323232;
-  margin: 0;
-  font-family: "Avenir", "Roboto", sans-serif;
-}
-
 .comment {
   padding: 0 5%;
 }
@@ -782,10 +776,10 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: none;
+  outline: none;
   height: 48px;
   margin-bottom: 32px;
   width: 232px;
-  outline: none;
 }
 
 .comment__button:hover {
@@ -891,5 +885,11 @@ body {
 .comments__history-body {
   padding: 0;
   margin: 0;
+}
+
+body {
+  color: #323232;
+  margin: 0;
+  font-family: "Avenir", "Roboto", sans-serif;
 }
 /*# sourceMappingURL=main.css.map */

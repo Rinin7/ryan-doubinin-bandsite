@@ -591,6 +591,9 @@ li {
 @media screen and (min-width: 768px) {
   .shows__container-top {
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -599,9 +602,6 @@ li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-  .shows__container:first-of-type .shows__heading {
-    display: block;
   }
 }
 
@@ -626,10 +626,12 @@ li {
 
 @media screen and (min-width: 768px) {
   .shows__heading {
-    display: none;
     padding-bottom: 24px;
     font-size: 0.75rem;
     line-height: 1.25rem;
+  }
+  .shows__heading-line {
+    display: none;
   }
 }
 
@@ -686,9 +688,6 @@ li {
 }
 
 .shows__button {
-  margin: 0 0 16px;
-  padding: 14px;
-  width: 288px;
   background-color: #323232;
   color: white;
   font-family: "Avenir";
@@ -699,6 +698,9 @@ li {
           box-sizing: border-box;
   border: none;
   outline: none;
+  margin: 0 0 16px;
+  padding: 14px;
+  width: 288px;
 }
 
 .shows__button:hover {

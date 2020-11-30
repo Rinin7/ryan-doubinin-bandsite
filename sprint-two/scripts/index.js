@@ -1,23 +1,20 @@
-// Dynamic Timestamp
-// To add a more realistic feel to the site, try updating the timestamp in the comments section to reflect when it was posted in a more human-readable format. Using YouTube as an example, a recently posted comment might display the time posted as "10 minutes ago" or "3 days ago". Apply this type of timestamp to your data without hardcoding the actual message.
-
 let comments = [
   {
     fullName: "Michael Lyons",
-    profilePictureUrl: "./assets/images/Mohan-muruge3.png",
-    timeStamp: "12/18/2018",
+    profilePictureUrl: "https://placekitten.com/200/200",
+    timeStamp: Date.parse("2020-11-29"),
     comment: "They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the greatest opening of a concert I have EVER witnessed.",
   },
   {
     fullName: "Gary Wong",
-    profilePictureUrl: "./assets/images/Mohan-muruge3.png",
-    timeStamp: "12/12/2018",
+    profilePictureUrl: "https://placekitten.com/201/201",
+    timeStamp: Date.parse("2020-11-13"),
     comment: "Every time I see him shred I feel so motivated to get off my couch and hop on my board. He’s so talented! I wish I can ride like him one day so I can really enjoy myself!",
   },
   {
     fullName: "Theodore Duncan",
-    profilePictureUrl: "./assets/images/Mohan-muruge3.png",
-    timeStamp: "11/15/2018",
+    profilePictureUrl: "https://placekitten.com/202/202",
+    timeStamp: Date.parse("2020-08-27"),
     comment: "How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!",
   },
 ];
@@ -27,7 +24,7 @@ function renderComments() {
   const commentsContainer = document.querySelector(".comments");
   commentsContainer.innerHTML = "";
 
-  // defining the html that we want to place into the comments section
+  // defining the html to place into the comments section
   let html = "";
 
   // using comments array data with a template to define new html
@@ -42,7 +39,7 @@ function renderComments() {
       <div class="comments__history-text-container">
         <div class="comments__history-header-container">
           <div class="comments__history-name">${comment.fullName}</div>
-          <div class="comments__history-date">${comment.timeStamp}</div>
+          <div class="comments__history-date">${timeSince(comment.timeStamp)}</div>
         </div>
         <div class="comments__history-body">${comment.comment}</div>
       </div>
@@ -68,7 +65,7 @@ commentForm.addEventListener("submit", function (event) {
   const nameInputValue = event.target.name.value;
   const commentInputValue = event.target.comment.value;
   const profilePictureUrl = "./assets/images/Mohan-muruge3.png";
-  const timeStamp = "11/28/2020";
+  const timeStamp = new Date(Date.now());
 
   const newComment = {
     fullName: nameInputValue,
@@ -79,3 +76,41 @@ commentForm.addEventListener("submit", function (event) {
 
   displayComment(newComment);
 });
+
+function timeSince(date) {
+  let currentTime = Date.now();
+  let difference = currentTime - date;
+  let num = 0;
+
+  const second = 1000;
+  const minute = 60000;
+  const hour = 3600000;
+  const day = 86400000;
+  const week = 604800000;
+  const month = 2592000000;
+  const year = 31556952000;
+
+  const timeBeforeNow = "moments ago";
+
+  if (difference < minute) {
+    return timeBeforeNow;
+  } else if (difference < hour) {
+    num = Math.floor(difference / minute);
+    return num === 1 ? `${num} min ago` : `${num} mins ago`;
+  } else if (difference < day) {
+    num = Math.floor(difference / hour);
+    return num === 1 ? `${num} hour ago` : `${num} hours ago`;
+  } else if (difference < week) {
+    num = Math.floor(difference / day);
+    return num === 1 ? `${num} day ago` : `${num} days ago`;
+  } else if (difference < month) {
+    num = Math.floor(difference / week);
+    return num === 1 ? `${num} week ago` : `${num} weeks ago`;
+  } else if (difference < year) {
+    num = Math.floor(difference / month);
+    return num === 1 ? `${num} month ago` : `${num} months ago`;
+  } else if (difference > year) {
+    num = Math.floor(difference / year);
+    return num === 1 ? `${num} year ago` : `${num} years ago`;
+  }
+}
