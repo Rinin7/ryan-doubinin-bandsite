@@ -24,30 +24,11 @@ function renderComments() {
   const commentsContainer = document.querySelector(".comments");
   commentsContainer.innerHTML = "";
 
-  // defining the html to place into the comments section
-  let html = "";
-
   // using comments array data with a template to define new html
   comments.forEach((comment) => {
-    html =
-      html +
-      `
-    <div class="comments__history">
-      <div class="comments__history-profile-container">
-        <img class="comments__history-profile" src="${comment.profilePictureUrl}" alt="profile picture for user" />
-      </div>
-      <div class="comments__history-text-container">
-        <div class="comments__history-header-container">
-          <div class="comments__history-name">${comment.fullName}</div>
-          <div class="comments__history-date">${timeSince(comment.timeStamp)}</div>
-        </div>
-        <div class="comments__history-body">${comment.comment}</div>
-      </div>
-    </div>
-    `;
+    const commentElement = constructCommentNode(comment);
+    commentsContainer.appendChild(commentElement);
   });
-
-  commentsContainer.innerHTML = html;
 }
 
 renderComments();
@@ -75,7 +56,48 @@ commentForm.addEventListener("submit", function (event) {
   };
 
   displayComment(newComment);
+  commentForm.reset();
 });
+
+function constructCommentNode(comment) {
+  const commentsHistory = document.createElement("div");
+  commentsHistory.className = "comments__history";
+
+  const profileContainer = document.createElement("div");
+  profileContainer.className = "comments__history-profile-container";
+  commentsHistory.appendChild(profileContainer);
+
+  const profile = document.createElement("img");
+  profile.setAttribute("src", comment.profilePictureUrl);
+  profile.setAttribute("alt", "profile picture for user");
+  profile.className = "comments__history-profile";
+  profileContainer.appendChild(profile);
+
+  const textContainer = document.createElement("div");
+  textContainer.className = "comments__history-text-container";
+  commentsHistory.appendChild(textContainer);
+
+  const headerContainer = document.createElement("div");
+  headerContainer.className = "comments__history-header-container";
+  textContainer.appendChild(headerContainer);
+
+  const historyName = document.createElement("div");
+  historyName.className = "comments__history-name";
+  historyName.innerText = comment.fullName;
+  headerContainer.appendChild(historyName);
+
+  const historyDate = document.createElement("div");
+  historyDate.className = "comments__history-date";
+  historyDate.innerText = timeSince(comment.timeStamp);
+  headerContainer.appendChild(historyDate);
+
+  const historyBody = document.createElement("div");
+  historyBody.className = "comments__history-body";
+  historyBody.innerText = comment.comment;
+  textContainer.appendChild(historyBody);
+
+  return commentsHistory;
+}
 
 function timeSince(date) {
   let currentTime = Date.now();
