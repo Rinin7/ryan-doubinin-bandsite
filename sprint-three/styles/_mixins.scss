@@ -1,0 +1,23 @@
+@mixin tablet {
+  @media screen and (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin button-design {
+  background-color: $primary-color;
+  color: $secondary-font;
+  font-family: "Avenir";
+  font-weight: 500;
+  border-radius: 4px;
+  font-size: 17px;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}

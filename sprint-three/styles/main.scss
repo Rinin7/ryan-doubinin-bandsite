@@ -1,0 +1,18 @@
+@import "variables";
+@import "mixins";
+@import "typography";
+@import "./partials/header";
+@import "./partials/hero";
+@import "./partials/feature";
+@import "./partials/gallery";
+@import "./partials/footer";
+@import "./partials/comment";
+@import "./partials/comments";
+
+// CSS styling has been organized to their respective partials
+
+body {
+  color: $global-font;
+  margin: 0;
+  font-family: "Avenir", "Roboto", sans-serif;
+}
