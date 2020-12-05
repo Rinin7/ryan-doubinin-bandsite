@@ -128,3 +128,19 @@ function renderShows() {
 }
 
 renderShows();
+
+const apiUrl = "https://project-1-api.herokuapp.com";
+const apiKey = "?api_key=7c5f3ee5-b4a4-42c4-99d5-fe66c6b56949";
+const endPoint = "/showdates";
+
+let showInfo = axios
+  .get(apiUrl + endPoint + apiKey)
+
+  .then((res) => {
+    console.log(res.request.response);
+    let showsArray = res.request.response;
+  })
+
+  .catch((error) => {
+    console.log("axios failed");
+  });
