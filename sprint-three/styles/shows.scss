@@ -23,28 +23,29 @@ li {
 .hero {
   display: flex;
   height: 472px;
-  background-image: url("../assets/images/musician-feature10.jpg");
+  background-image: url("../assets/images/showshero.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  padding: 0 5%;
 
   @include tablet {
     height: 670px;
-    padding: 0 3.125%;
-  }
-
-  @include desktop {
-    padding: 0 12.5%;
   }
 
   &__content {
     display: flex;
     flex-flow: column wrap;
     color: $secondary-font;
+    flex-basis: 100%;
+    background-color: rgba(#323232, 0.5);
+    padding: 0 5%;
+
+    @include tablet {
+      padding: 0 3.125%;
+    }
 
     @include desktop {
-      width: 100%;
+      padding: 0 12.5%;
     }
   }
 

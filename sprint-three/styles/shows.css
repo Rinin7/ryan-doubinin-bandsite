@@ -405,23 +405,15 @@ li {
   display: -ms-flexbox;
   display: flex;
   height: 472px;
-  background-image: url("../assets/images/musician-feature10.jpg");
+  background-image: url("../assets/images/showshero.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  padding: 0 5%;
 }
 
 @media screen and (min-width: 768px) {
   .hero {
     height: 670px;
-    padding: 0 3.125%;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .hero {
-    padding: 0 12.5%;
   }
 }
 
@@ -434,11 +426,21 @@ li {
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
   color: white;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  background-color: rgba(50, 50, 50, 0.5);
+  padding: 0 5%;
+}
+
+@media screen and (min-width: 768px) {
+  .hero__content {
+    padding: 0 3.125%;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .hero__content {
-    width: 100%;
+    padding: 0 12.5%;
   }
 }
 
