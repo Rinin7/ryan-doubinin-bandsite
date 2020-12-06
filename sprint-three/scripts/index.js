@@ -1,62 +1,89 @@
-let comments = [
-  {
-    fullName: "Michael Lyons",
-    profilePictureUrl: "https://placekitten.com/200/200",
-    timeStamp: Date.parse("2020-11-29"),
-    comment: "They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the greatest opening of a concert I have EVER witnessed.",
-  },
-  {
-    fullName: "Gary Wong",
-    profilePictureUrl: "https://placekitten.com/201/201",
-    timeStamp: Date.parse("2020-11-13"),
-    comment: "Every time I see him shred I feel so motivated to get off my couch and hop on my board. He’s so talented! I wish I can ride like him one day so I can really enjoy myself!",
-  },
-  {
-    fullName: "Theodore Duncan",
-    profilePictureUrl: "https://placekitten.com/202/202",
-    timeStamp: Date.parse("2020-08-27"),
-    comment: "How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!",
-  },
-];
+// let comments = [
+//   {
+//     fullName: "Michael Lyons",
+//     profilePictureUrl: "https://placekitten.com/200/200",
+//     timeStamp: Date.parse("2020-11-29"),
+//     comment: "They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the greatest opening of a concert I have EVER witnessed.",
+//   },
+//   {
+//     fullName: "Gary Wong",
+//     profilePictureUrl: "https://placekitten.com/201/201",
+//     timeStamp: Date.parse("2020-11-13"),
+//     comment: "Every time I see him shred I feel so motivated to get off my couch and hop on my board. He’s so talented! I wish I can ride like him one day so I can really enjoy myself!",
+//   },
+//   {
+//     fullName: "Theodore Duncan",
+//     profilePictureUrl: "https://placekitten.com/202/202",
+//     timeStamp: Date.parse("2020-08-27"),
+//     comment: "How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!",
+//   },
+// ];
+
+const apiUrl = "https://project-1-api.herokuapp.com";
+const apiKey = "?api_key=7c5f3ee5-b4a4-42c4-99d5-fe66c6b56949";
+const endPoint = "/comments";
 
 // create a function that clears all comments from the page
 function renderComments() {
   const commentsContainer = document.querySelector(".comments");
   commentsContainer.innerHTML = "";
 
-  // using comments array data with a template to define new html
-  comments.forEach((comment) => {
-    const commentElement = constructCommentNode(comment);
-    commentsContainer.appendChild(commentElement);
-  });
+  let commentInfo = axios
+    .get(apiUrl + endPoint + apiKey)
+
+    .catch((error) => {
+      console.log("axios failed");
+    })
+
+    .then((res) => {
+      let commentsArray = res.data;
+      commentsArray.sort(function (a, b) {
+        let timeA = a.timestamp;
+        let timeB = b.timestamp;
+        if (timeA > timeB) {
+          return -1;
+        }
+        if (timeA < timeB) {
+          return 1;
+        }
+        return 0;
+      });
+
+      // using comments array data with a template to define new html
+      commentsArray.forEach((comment) => {
+        const commentElement = constructCommentNode(comment);
+        commentsContainer.appendChild(commentElement);
+      });
+    });
 }
 
 renderComments();
+// displayComment();
 
-function displayComment(comment) {
-  comments.unshift(comment);
-  renderComments();
-}
+// function displayComment(comment) {
+//   commentsArray.unshift(comment);
+//   renderComments();
+// }
 
 const commentForm = document.querySelector(".comment__form");
 
 commentForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  const nameInputValue = event.target.name.value;
-  const commentInputValue = event.target.comment.value;
-  const profilePictureUrl = "./assets/images/Mohan-muruge3.png";
-  const timeStamp = new Date(Date.now());
+  axios
+    .post(apiUrl + endPoint + apiKey, {
+      name: document.querySelector(".comment__input-name-field").value,
+      comment: document.querySelector(".comment__input-comment-field").value,
+    })
 
-  const newComment = {
-    fullName: nameInputValue,
-    profilePictureUrl: profilePictureUrl,
-    timeStamp: timeStamp,
-    comment: commentInputValue,
-  };
+    .catch((error) => {
+      console.log("axios failed");
+    })
 
-  displayComment(newComment);
-  commentForm.reset();
+    .then((res) => {
+      renderComments();
+      commentForm.reset();
+    });
 });
 
 function constructCommentNode(comment) {
@@ -68,7 +95,7 @@ function constructCommentNode(comment) {
   commentsHistory.appendChild(profileContainer);
 
   const profile = document.createElement("img");
-  profile.setAttribute("src", comment.profilePictureUrl);
+  profile.setAttribute("src", "./assets/images/Mohan-muruge3.png");
   profile.setAttribute("alt", "profile picture for user");
   profile.className = "comments__history-profile";
   profileContainer.appendChild(profile);
@@ -83,12 +110,12 @@ function constructCommentNode(comment) {
 
   const historyName = document.createElement("div");
   historyName.className = "comments__history-name";
-  historyName.innerText = comment.fullName;
+  historyName.innerText = comment.name;
   headerContainer.appendChild(historyName);
 
   const historyDate = document.createElement("div");
   historyDate.className = "comments__history-date";
-  historyDate.innerText = timeSince(comment.timeStamp);
+  historyDate.innerText = timeSince(comment.timestamp);
   headerContainer.appendChild(historyDate);
 
   const historyBody = document.createElement("div");
