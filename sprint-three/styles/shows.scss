@@ -22,14 +22,16 @@ li {
 
 .hero {
   display: flex;
-  height: 472px;
+  max-height: 472px;
+  height: 147.5vw;
   background-image: url("../assets/images/showshero.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 
   @include tablet {
-    height: 670px;
+    height: 87.24vw;
+    min-height: 670px;
   }
 
   &__content {

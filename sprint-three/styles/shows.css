@@ -404,7 +404,8 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 472px;
+  max-height: 472px;
+  height: 147.5vw;
   background-image: url("../assets/images/showshero.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -413,7 +414,8 @@ li {
 
 @media screen and (min-width: 768px) {
   .hero {
-    height: 670px;
+    height: 87.24vw;
+    min-height: 670px;
   }
 }
 
